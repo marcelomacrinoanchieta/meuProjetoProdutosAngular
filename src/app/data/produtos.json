@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Notebook Pro 14",
+    "descricao": "Notebook com processador de 8 núcleos, 16 GB de memória RAM e SSD de 512 GB, ideal para estudos e desenvolvimento.",
+    "preco": 4599.9
+  },
+  {
+    "id": 2,
+    "nome": "Mouse Sem Fio",
+    "descricao": "Mouse ergonômico com conexão sem fio, 1600 DPI e bateria de longa duração.",
+    "preco": 89.9
+  },
+  {
+    "id": 3,
+    "nome": "Teclado Mecânico",
+    "descricao": "Teclado mecânico ABNT2 com iluminação LED e switches de alta durabilidade.",
+    "preco": 299.0
+  },
+  {
+    "id": 4,
+    "nome": "Monitor 24 polegadas",
+    "descricao": "Monitor Full HD com painel IPS, bordas finas e taxa de atualização de 75 Hz.",
+    "preco": 899.99
+  },
+  {
+    "id": 5,
+    "nome": "Headset Gamer",
+    "descricao": "Headset com som surround, microfone removível e almofadas acolchoadas.",
+    "preco": 249.5
+  },
+  {
+    "id": 6,
+    "nome": "Webcam HD",
+    "descricao": "Webcam 1080p com microfone embutido, perfeita para aulas e reuniões online.",
+    "preco": 179.9
+  }
+]

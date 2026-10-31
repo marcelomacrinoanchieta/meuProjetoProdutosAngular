@@ -1,0 +1,25 @@
+<section class="home">
+  <div class="home-hero">
+    <h1>Bem-vindo ao Catálogo de Produtos</h1>
+    <p>
+      Uma aplicação Angular para gerenciar seu catálogo de forma
+      simples, rápida e responsiva.
+    </p>
+    <button
+      type="button"
+      class="btn btn-primario home-botao"
+      (click)="navegar.emit('produtos')"
+    >
+      Ver produtos
+    </button>
+  </div>
+
+  <div class="home-recursos">
+    @for (recurso of recursos; track recurso.titulo) {
+      <article class="home-card">
+        <h2>{{ recurso.titulo }}</h2>
+        <p>{{ recurso.texto }}</p>
+      </article>
+    }
+  </div>
+</section>

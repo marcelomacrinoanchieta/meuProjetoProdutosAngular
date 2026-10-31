@@ -1,0 +1,68 @@
+<section class="produtos">
+  <div class="produtos-cabecalho">
+    <div>
+      <h1>Produtos</h1>
+      <p>{{ produtos().length }} produto(s) cadastrado(s)</p>
+    </div>
+    <div class="produtos-acoes">
+      <button type="button" class="btn btn-secundario" (click)="restaurarPadrao()">
+        Restaurar Padrão
+      </button>
+      <button type="button" class="btn btn-primario" (click)="abrirModalInclusao()">
+        + Novo Produto
+      </button>
+    </div>
+  </div>
+
+  <div class="produtos-grade">
+    @for (produto of produtos(); track produto.id) {
+      <article class="produto-card">
+        <h2 class="produto-nome">{{ produto.nome }}</h2>
+        <p class="produto-descricao">{{ produto.descricao | resumo }}</p>
+        <p class="produto-preco">{{ produto.preco | currency: 'BRL' }}</p>
+        <div class="produto-botoes">
+          <button type="button" class="btn btn-editar" (click)="abrirModalEdicao(produto)">
+            Editar
+          </button>
+          <button type="button" class="btn btn-excluir" (click)="excluirProduto(produto)">
+            Excluir
+          </button>
+        </div>
+      </article>
+    } @empty {
+      <p class="produtos-vazio">
+        Nenhum produto cadastrado. Clique em "+ Novo Produto" para começar.
+      </p>
+    }
+  </div>
+
+  @if (modalAberto()) {
+    <div class="modal-fundo" (click)="fecharModal()">
+      <div class="modal" (click)="$event.stopPropagation()">
+        <h2>{{ idEmEdicao() === null ? 'Novo Produto' : 'Editar Produto' }}</h2>
+
+        <form class="modal-formulario" (ngSubmit)="salvar()">
+          <label for="nome">Nome *</label>
+          <input id="nome" name="nome" type="text" [(ngModel)]="nome" />
+
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" rows="3" [(ngModel)]="descricao"></textarea>
+
+          <label for="preco">Preço (R$) *</label>
+          <input id="preco" name="preco" type="number" step="0.01" min="0" [(ngModel)]="preco" />
+
+          @if (erro()) {
+            <p class="modal-erro">{{ erro() }}</p>
+          }
+
+          <div class="modal-botoes">
+            <button type="button" class="btn btn-secundario" (click)="fecharModal()">
+              Cancelar
+            </button>
+            <button type="submit" class="btn btn-primario">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  }
+</section>

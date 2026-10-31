@@ -1,0 +1,24 @@
+<header class="navbar">
+  <div class="navbar-container">
+    <button type="button" class="navbar-logo" (click)="navegar.emit('home')">
+      Catálogo<span>Pro</span>
+    </button>
+
+    <nav>
+      <ul class="navbar-links">
+        @for (link of links; track link.id) {
+          <li>
+            <button
+              type="button"
+              class="navbar-link"
+              [class.ativo]="paginaAtual() === link.id"
+              (click)="navegar.emit(link.id)"
+            >
+              {{ link.rotulo }}
+            </button>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

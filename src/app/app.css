@@ -1,0 +1,21 @@
+/* ===== Estrutura da aplicação ===== */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.rodape {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+}

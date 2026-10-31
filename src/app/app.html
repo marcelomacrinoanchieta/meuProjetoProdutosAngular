@@ -1,0 +1,18 @@
+<div class="app">
+  <app-navbar [paginaAtual]="paginaAtual()" (navegar)="navegar($event)" />
+
+  <main class="conteudo">
+    @switch (paginaAtual()) {
+      @case ('home') {
+        <app-home (navegar)="navegar($event)" />
+      }
+      @case ('produtos') {
+        <app-produtos />
+      }
+    }
+  </main>
+
+  <footer class="rodape">
+    Sistema de Gerenciamento de Produtos &copy; 2026
+  </footer>
+</div>

@@ -1,0 +1,65 @@
+/* ===== Variáveis globais (paleta e medidas) ===== */
+:root {
+  --cor-primaria: #0b4a94;
+  --cor-primaria-escura: #083870;
+  --cor-destaque: #f9b91a;
+  --cor-perigo: #d64545;
+  --cor-texto: #1f2937;
+  --cor-texto-suave: #6b7280;
+  --cor-fundo: #f3f5f9;
+  --cor-superficie: #ffffff;
+  --raio: 10px;
+  --sombra: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Reset básico ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.5;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ===== Botões reutilizáveis (usados em vários componentes) ===== */
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primario {
+  background-color: var(--cor-primaria);
+  color: #fff;
+}
+
+.btn-primario:hover {
+  background-color: var(--cor-primaria-escura);
+}
+
+.btn-secundario {
+  background-color: #e5e7eb;
+  color: var(--cor-texto);
+}
+
+.btn-secundario:hover {
+  background-color: #d1d5db;
+}

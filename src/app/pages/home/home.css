@@ -1,0 +1,53 @@
+.home-hero {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-escura));
+  color: #fff;
+  border-radius: var(--raio);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--sombra);
+}
+
+.home-hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  margin-bottom: 0.75rem;
+}
+
+.home-hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  opacity: 0.9;
+}
+
+.home-botao {
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria-escura);
+}
+
+.home-botao:hover {
+  background-color: #ffcb45;
+}
+
+.home-recursos {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.home-card {
+  background-color: var(--cor-superficie);
+  border-radius: var(--raio);
+  padding: 1.25rem;
+  box-shadow: var(--sombra);
+  border-top: 4px solid var(--cor-destaque);
+}
+
+.home-card h2 {
+  font-size: 1.15rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.4rem;
+}
+
+.home-card p {
+  color: var(--cor-texto-suave);
+}

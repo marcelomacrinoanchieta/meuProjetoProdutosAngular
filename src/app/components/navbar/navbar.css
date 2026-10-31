@@ -1,0 +1,59 @@
+/* O próprio elemento <app-navbar> fica fixo no topo */
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  background-color: var(--cor-primaria);
+  box-shadow: var(--sombra);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.navbar-logo span {
+  color: var(--cor-destaque);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar-link {
+  background: transparent;
+  border: 2px solid transparent;
+  color: #fff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.navbar-link:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-link.ativo {
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria-escura);
+}
